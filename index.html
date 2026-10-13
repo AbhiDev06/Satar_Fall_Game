@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starfall - Space Shooter</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hud">
+      <div><small>Score</small><b id="score">0</b></div>
+      <div><small>Lives</small><b id="lives">3</b></div>
+      <div><small>Wave</small><b id="wave">1</b></div>
+      <div><small>Best</small><b id="best">0</b></div>
+      <button id="pauseBtn" aria-label="Pause game">Pause</button>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="480" height="640" aria-label="Starfall game screen"></canvas>
+      <div id="overlay" class="overlay">
+        <h1 id="ovTitle">Starfall</h1>
+        <p id="ovText">Defend the galaxy. Your ship fires automatically.</p>
+        <button id="startBtn" class="start">Start game</button>
+        <ul class="help">
+          <li><b>Move:</b> arrow keys, A / D, or drag with mouse or finger</li>
+          <li><b>Pause:</b> P or Esc</li>
+          <li><span class="dot rapid"></span> Rapid triple shot</li>
+          <li><span class="dot shield"></span> Shield</li>
+          <li><span class="dot life"></span> Extra life</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

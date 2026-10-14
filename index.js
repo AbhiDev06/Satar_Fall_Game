@@ -282,6 +282,17 @@ function togglePause() {
 
 $("startBtn").addEventListener("click", () => { if (paused) togglePause(); else start(); });
 $("pauseBtn").addEventListener("click", togglePause);
+$("resetBestBtn").addEventListener("click", () => {
+    best = 0;
+
+    try {
+        localStorage.removeItem("starfall-best");
+    } catch (e) {
+        // Storage may be unavailable.
+    }
+
+    $("best").textContent = best;
+});
 
 document.addEventListener("keydown", e => {
     const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
